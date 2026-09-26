@@ -165,6 +165,8 @@ html[data-play="live"] .play-soon { display: none !important; }
   overflow: hidden;
   transition: transform 80ms ease, background-color .2s;
 }
+.btn3d__face { gap: 12px; }
+.btn3d__logo { flex: none; width: 24px; height: 24px; margin-top: -3px; }  /* optical centre: the apple's leaf sits high */
 .btn3d:hover .btn3d__face { background: #333337; }
 .btn3d:active .btn3d__face { transform: translateY(8px); }
 .btn3d:focus-visible { outline-offset: 5px; border-radius: var(--pill); }
