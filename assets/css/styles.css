@@ -219,12 +219,12 @@ a.badge:hover { transform: translateY(-2px); }
    baked in, so the frame only draws the bezel. */
 .phone {
   position: relative;
-  padding: 3.4%;
-  border-radius: 16.5% / 7.6%;
+  padding: 1.9%;
+  border-radius: 15.5% / 7.2%;
   background: linear-gradient(145deg, #2c2c30, #0d0d0f 40%, #1c1c1f);
   box-shadow:
-    inset 0 0 0 1.5px #4a4a50,
-    inset 0 0 0 4px #0b0b0c,
+    inset 0 0 0 1px #4a4a50,
+    inset 0 0 0 2.5px #0b0b0c,
     0 50px 90px -30px rgba(10, 31, 68, .45),
     0 24px 40px -24px rgba(0, 0, 0, .45);
 }
@@ -238,7 +238,7 @@ a.badge:hover { transform: translateY(-2px); }
 .phone__screen {
   position: relative; overflow: hidden; isolation: isolate;
   aspect-ratio: 1179 / 2556;
-  border-radius: 13.4% / 6.2%;
+  border-radius: 13.9% / 6.5%;
   background: var(--bg-screen, var(--bg, #fff));
   transition: background-color .6s var(--ease);
 }
