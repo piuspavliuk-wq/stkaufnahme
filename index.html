@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="de" class="no-js" data-platform="desktop" data-play="soon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>StkAufnahme – Vorbereitung auf den Aufnahmetest am Studienkolleg</title>
+  <meta name="description" content="Über 250 Übungen im Format deines Studienkollegs: C-Test, Grammatik, Mathe und Prüfungssimulation unter echtem Zeitdruck. Für iPhone und Android.">
+  <link rel="canonical" href="https://piuspavliuk-wq.github.io/stkaufnahme/">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Safari on iOS shows its native "Laden / Öffnen" banner for the app -->
+  <meta name="apple-itunes-app" content="app-id=6787462884">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="StkAufnahme – Besteh den Aufnahmetest">
+  <meta property="og:description" content="C-Test, Grammatik und Mathe im Format deines Studienkollegs – mit Prüfungssimulation unter echtem Zeitdruck.">
+  <meta property="og:url" content="https://piuspavliuk-wq.github.io/stkaufnahme/">
+  <meta property="og:image" content="https://piuspavliuk-wq.github.io/stkaufnahme/assets/img/og.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/screens/hero.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script>
+    /*
+     * ── Store config ────────────────────────────────────────────────────────
+     * The only place to touch when something changes in the stores.
+     * PLAY_LIVE: flip to true once the app is out of closed testing and the
+     * Play listing is public — until then Android visitors see "bald".
+     */
+    window.STK = {
+      APP_STORE_URL: 'https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884',
+      PLAY_URL: 'https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme',
+      PLAY_LIVE: false,
+    };
+
+    // Resolved before first paint so the right download button renders straight
+    // away instead of flashing the desktop badges on a phone.
+    (function () {
+      var ua = navigator.userAgent || '';
+      var iPadOS = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+      var platform = /iPhone|iPad|iPod/.test(ua) || iPadOS ? 'ios' : /Android/i.test(ua) ? 'android' : 'desktop';
+      var forced = new URLSearchParams(location.search).get('platform'); // ?platform=android to preview
+      if (/^(ios|android|desktop)$/.test(forced)) platform = forced;
+      var root = document.documentElement;
+      root.classList.replace('no-js', 'js'); // scroll reveals only hide content when JS can show it again
+      root.dataset.platform = platform;
+      root.dataset.play = window.STK.PLAY_LIVE ? 'live' : 'soon';
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('reduce-motion');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "StkAufnahme – Studienkolleg",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "EducationalApplication",
+    "inLanguage": "de",
+    "url": "https://piuspavliuk-wq.github.io/stkaufnahme/",
+    "installUrl": "https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884",
+    "author": { "@type": "Person", "name": "Bohdan Pavliuk" }
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- ─────────────────────────────── Nav ─────────────────────────────── -->
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="StkAufnahme – nach oben">
+      <img src="assets/img/icon-192.png" width="28" height="28" alt="">
+      <span>StkAufnahme</span>
+    </a>
+    <nav class="nav__links" aria-label="Seitennavigation">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#kollegs">Studienkollegs</a>
+      <a href="#preise">Preise</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta only-ios" href="https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884" data-store="ios">Laden</a>
+    <a class="nav__cta only-android play-live" href="https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme" data-store="android">Laden</a>
+    <a class="nav__cta only-desktop" href="#download">Laden</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ─────────────────────────────── Hero ─────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="container hero__copy">
+      <p class="chip chip--blue hero__chip">Aufnahmetest · Studienkolleg</p>
+      <h1 class="hero__title">
+        <span class="w" style="--i:0">Besteh</span>
+        <span class="w" style="--i:1">den</span>
+        <span class="w w--grad" style="--i:2">Aufnahmetest.</span>
+      </h1>
+      <p class="hero__lead">
+        Über 250 Übungen im Format deines Studienkollegs – <span class="nowrap">C-Test</span>, Grammatik und Mathe.
+        Mit Prüfungssimulation unter echtem Zeitdruck.
+      </p>
+
+      <div class="cta hero__cta">
+        <a class="btn3d only-ios" href="https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884" data-store="ios">
+          <span class="btn3d__face">Im App Store laden</span>
+        </a>
+        <a class="btn3d only-android play-live" href="https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme" data-store="android">
+          <span class="btn3d__face">Bei Google Play laden</span>
+        </a>
+        <div class="soon only-android play-soon" role="status">
+          <span class="soon__dot" aria-hidden="true"></span>
+          <span><strong>Android-Version kommt bald.</strong> Sie ist gerade im Test bei Google Play.</span>
+        </div>
+        <div class="badges only-desktop">
+          <a class="badge" href="https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884" data-store="ios" aria-label="Im App Store laden">
+            <img src="assets/badges/app-store.svg" width="150" height="50" alt="Download on the App Store">
+          </a>
+          <a class="badge play-live" href="https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme" data-store="android" aria-label="Bei Google Play laden">
+            <img src="assets/badges/google-play.png" width="168" height="50" alt="Get it on Google Play">
+          </a>
+          <span class="badge badge--soon play-soon" title="Die Android-Version ist gerade im Test">
+            <img src="assets/badges/google-play.png" width="168" height="50" alt="Google Play – bald verfügbar">
+            <em>bald</em>
+          </span>
+        </div>
+        <p class="cta__note only-ios">Für iPhone &amp; iPad · auf Deutsch</p>
+        <p class="cta__note only-android play-live">Für Android · auf Deutsch</p>
+      </div>
+    </div>
+
+    <div class="hero__stage" data-hero-stage>
+      <div class="floater floater--left reveal" style="--i:6" data-parallax="-0.06">
+        <span class="floater__icon floater__icon--green" aria-hidden="true">✓</span>
+        <span><strong>Richtig</strong><small><span class="nowrap">C-Test</span> · Aufgabe 2</small></span>
+      </div>
+      <div class="floater floater--right reveal" style="--i:8" data-parallax="0.08">
+        <span class="floater__icon floater__icon--blue" aria-hidden="true">⏱</span>
+        <span><strong>40:00</strong><small>Mini-Prüfung</small></span>
+      </div>
+
+      <div class="phone phone--hero" data-hero-phone>
+        <div class="phone__screen is-cut" style="--bg:#fefeff">
+          <img src="assets/screens/hero.webp" width="900" height="1736" fetchpriority="high"
+               alt="Lernpfad der App: Block 1 Grammatik mit den Stationen C-Test, Lückentext und Grammatik">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── Stats ─────────────────────────────── -->
+  <section class="stats container" aria-label="StkAufnahme in Zahlen">
+    <div class="stat reveal" style="--i:0">
+      <span class="stat__num"><span data-count="250">250</span>+</span>
+      <span class="stat__label">Übungen im Prüfungsformat</span>
+    </div>
+    <div class="stat reveal" style="--i:1">
+      <span class="stat__num" data-count="26">26</span>
+      <span class="stat__label">Studienkollegs in ganz Deutschland</span>
+    </div>
+    <div class="stat reveal" style="--i:2">
+      <span class="stat__num" data-count="4">4</span>
+      <span class="stat__label">Kurse: T, M, W und G</span>
+    </div>
+    <div class="stat reveal" style="--i:3">
+      <span class="stat__num"><span data-count="40">40</span>&nbsp;Min.</span>
+      <span class="stat__label">Mini-Prüfungen unter Zeitdruck</span>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── Story (sticky) ─────────────────────────────── -->
+  <section class="story" id="funktionen">
+    <div class="container story__head reveal">
+      <p class="eyebrow">Funktionen</p>
+      <h2 class="h2">Alles, was dein<br>Aufnahmetest prüft.</h2>
+    </div>
+
+    <div class="container story__grid">
+      <div class="story__steps">
+        <article class="step is-active" data-step="0">
+          <p class="step__kicker">Lernpfad</p>
+          <h3 class="step__title">Schritt für Schritt zum Ziel.</h3>
+          <p class="step__text">Blöcke mit Prüfungs-Checkpoints führen dich durch <span class="nowrap">C-Test</span>, Lückentext und Grammatik. Der Einstufungstest bei der Anmeldung setzt dich direkt auf dein Niveau.</p>
+          <div class="phone phone--inline reveal">
+            <div class="phone__screen" style="--bg:#f8f8f8"><img src="assets/screens/path.webp" width="900" height="1979" loading="lazy" alt="Lernpfad mit abgeschlossenen und gesperrten Stationen"></div>
+          </div>
+        </article>
+
+        <article class="step" data-step="1">
+          <p class="step__kicker">Prüfungssimulation</p>
+          <h3 class="step__title">Wie im echten Test.</h3>
+          <p class="step__text">40-Minuten-Mini-Prüfungen unter echtem Zeitdruck – mit genau den Aufgabentypen, die dein Studienkolleg prüft.</p>
+          <div class="phone phone--inline reveal">
+            <div class="phone__screen is-cut" style="--bg:#f9fbfc"><img src="assets/screens/exam.webp" width="900" height="1727" loading="lazy" alt="Prüfungssimulation mit Timer, Auswahlaufgabe und C-Test"></div>
+          </div>
+        </article>
+
+        <article class="step" data-step="2">
+          <p class="step__kicker">Mathe</p>
+          <h3 class="step__title">Jeder Fehler erklärt.</h3>
+          <p class="step__text">Training für T-, M-, W- und G-Kurse. Deine Antwort wird sofort geprüft – mit verständlicher Lösung Schritt für Schritt.</p>
+          <div class="phone phone--inline reveal">
+            <div class="phone__screen is-cut" style="--bg:#f0f7f5"><img src="assets/screens/math.webp" width="900" height="1712" loading="lazy" alt="Mathe-Aufgabe zu Logarithmen mit geprüfter Antwort und Lösungsweg"></div>
+          </div>
+        </article>
+
+        <article class="step" data-step="3">
+          <p class="step__kicker">Vokabeltrainer</p>
+          <h3 class="step__title">Wortschatz, der bleibt.</h3>
+          <p class="step__text">Sammle Prüfungswortschatz und wiederhole ihn, bis er sitzt. Du siehst jederzeit, was noch zu lernen ist und was du schon kannst.</p>
+          <div class="phone phone--inline reveal">
+            <div class="phone__screen" style="--bg:#f8f8f8"><img src="assets/screens/vocab.webp" width="900" height="1978" loading="lazy" alt="Vokabeltrainer mit Lernstand: zu lernen, Lernphase, gelernt"></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="story__stage" aria-hidden="true">
+        <div class="story__sticky">
+          <div class="phone phone--stage">
+            <div class="phone__screen stack">
+              <img class="is-active" src="assets/screens/path.webp" width="900" height="1979" loading="lazy" alt="" data-screen="0" style="--bg:#f8f8f8">
+              <img src="assets/screens/exam.webp" width="900" height="1727" loading="lazy" alt="" data-screen="1" data-cut style="--bg:#f9fbfc">
+              <img src="assets/screens/math.webp" width="900" height="1712" loading="lazy" alt="" data-screen="2" data-cut style="--bg:#f0f7f5">
+              <img src="assets/screens/vocab.webp" width="900" height="1978" loading="lazy" alt="" data-screen="3" style="--bg:#f8f8f8">
+            </div>
+          </div>
+          <div class="story__dots">
+            <span class="is-active"></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── Kollegs marquee ─────────────────────────────── -->
+  <section class="kollegs" id="kollegs">
+    <div class="container kollegs__head reveal">
+      <p class="eyebrow">Studienkollegs</p>
+      <h2 class="h2">Abgestimmt auf dein Kolleg.</h2>
+      <p class="lead">Wähle dein Studienkolleg bei der Anmeldung – du übst genau die Aufgabentypen, die dort geprüft werden.</p>
+    </div>
+    <div class="marquee" aria-label="Unterstützte Studienkollegs">
+      <div class="marquee__row">
+        <ul class="marquee__track">
+          <li>Universitäten Bayern · München</li><li>HAW Bayern · Coburg</li><li>Goethe-Universität · Frankfurt</li>
+          <li>TU Darmstadt</li><li>Universität Kassel</li><li>Mittelhessen · Marburg</li><li>JGU Mainz</li>
+          <li>HS Kaiserslautern</li><li>Universität Heidelberg</li><li>KIT · Karlsruhe</li><li>HTWG Konstanz</li>
+          <li>Universität Hamburg</li><li>TU Berlin</li>
+        </ul>
+        <ul class="marquee__track" aria-hidden="true">
+          <li>Universitäten Bayern · München</li><li>HAW Bayern · Coburg</li><li>Goethe-Universität · Frankfurt</li>
+          <li>TU Darmstadt</li><li>Universität Kassel</li><li>Mittelhessen · Marburg</li><li>JGU Mainz</li>
+          <li>HS Kaiserslautern</li><li>Universität Heidelberg</li><li>KIT · Karlsruhe</li><li>HTWG Konstanz</li>
+          <li>Universität Hamburg</li><li>TU Berlin</li>
+        </ul>
+      </div>
+      <div class="marquee__row marquee__row--reverse">
+        <ul class="marquee__track">
+          <li>FU Berlin</li><li>Studienkolleg Sachsen · Leipzig</li><li>TUDIAS · Dresden</li><li>Glauchau</li>
+          <li>HS Zittau/Görlitz</li><li>Hochschule Anhalt · Köthen</li><li>Halle (Saale)</li><li>Nordhausen</li>
+          <li>Ökumenisches Studienwerk · Bochum</li><li>Mettingen</li><li>Universität Hannover</li><li>HS Wismar</li><li>FH Kiel</li>
+        </ul>
+        <ul class="marquee__track" aria-hidden="true">
+          <li>FU Berlin</li><li>Studienkolleg Sachsen · Leipzig</li><li>TUDIAS · Dresden</li><li>Glauchau</li>
+          <li>HS Zittau/Görlitz</li><li>Hochschule Anhalt · Köthen</li><li>Halle (Saale)</li><li>Nordhausen</li>
+          <li>Ökumenisches Studienwerk · Bochum</li><li>Mettingen</li><li>Universität Hannover</li><li>HS Wismar</li><li>FH Kiel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── How it works ─────────────────────────────── -->
+  <section class="how container" aria-labelledby="how-title">
+    <div class="how__head reveal">
+      <p class="eyebrow">So funktioniert's</p>
+      <h2 class="h2" id="how-title">In drei Minuten startklar.</h2>
+    </div>
+    <ol class="how__list">
+      <li class="card reveal" style="--i:0">
+        <span class="card__num">1</span>
+        <h3>Kolleg und Kurs wählen</h3>
+        <p>Stadt, Studienkolleg und Kurs – damit passt jede Übung zu deiner Prüfung.</p>
+      </li>
+      <li class="card reveal" style="--i:1">
+        <span class="card__num">2</span>
+        <h3>Einstufungstest machen</h3>
+        <p>Ein kurzer Test zeigt, wo du stehst. Der Lernpfad startet auf deinem Niveau.</p>
+      </li>
+      <li class="card reveal" style="--i:2">
+        <span class="card__num">3</span>
+        <h3>Block für Block üben</h3>
+        <p>Übungen, Checkpoints und Mini-Prüfungen – bis der Aufnahmetest Routine ist.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─────────────────────────────── Pricing ─────────────────────────────── -->
+  <section class="pricing" id="preise" aria-labelledby="pricing-title">
+    <div class="container">
+      <div class="pricing__head reveal">
+        <p class="eyebrow">StkAufnahme Pro</p>
+        <h2 class="h2" id="pricing-title">Voller Zugriff. Faire Laufzeiten.</h2>
+        <p class="lead">Alle Übungen, Prüfungen und Simulationen – wähle, wie lange du dich vorbereitest.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal" style="--i:0">
+          <p class="plan__name">1 Monat</p>
+          <p class="plan__price">24,95&nbsp;€</p>
+          <p class="plan__per">pro Monat</p>
+        </div>
+        <div class="plan plan--selected reveal" style="--i:1">
+          <span class="plan__badge">Beliebt</span>
+          <p class="plan__name">3 Monate</p>
+          <p class="plan__price">49,90&nbsp;€</p>
+          <p class="plan__per">≈ 16,63&nbsp;€ pro Monat</p>
+        </div>
+        <div class="plan reveal" style="--i:2">
+          <span class="plan__badge plan__badge--best">Bester Preis</span>
+          <p class="plan__name">6 Monate</p>
+          <p class="plan__price">69,90&nbsp;€</p>
+          <p class="plan__per">≈ 11,65&nbsp;€ pro Monat</p>
+        </div>
+      </div>
+      <p class="pricing__fine reveal">
+        Preise inkl. MwSt. Kauf und Abrechnung über den App Store bzw. Google Play. Das Abo verlängert sich automatisch um die gewählte Laufzeit,
+        wenn es nicht mindestens 24&nbsp;Stunden vor Ende gekündigt wird – jederzeit in den Store-Einstellungen. Es gilt das gesetzliche 14-tägige Widerrufsrecht.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── FAQ ─────────────────────────────── -->
+  <section class="faq container" id="faq" aria-labelledby="faq-title">
+    <div class="faq__head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" id="faq-title">Häufige Fragen.</h2>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item reveal">
+        <summary>Für welche Studienkollegs ist StkAufnahme?</summary>
+        <div class="faq__body"><p>Die Inhalte sind auf 26 Studienkollegs in ganz Deutschland abgestimmt. Du wählst dein Kolleg bei der Anmeldung, und die App zeigt dir die Aufgabentypen, die dort geprüft werden.</p></div>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Welche Kurse werden abgedeckt?</summary>
+        <div class="faq__body"><p>Deutsch für alle Kurse – <span class="nowrap">C-Test</span>, Lückentext, Grammatik, Auswahlaufgaben und Satzumformungen – und Mathe für die T-, M-, W- und G-Kurse.</p></div>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Gibt es StkAufnahme auch für Android?</summary>
+        <div class="faq__body">
+          <p class="play-live">Ja – StkAufnahme gibt es im App Store und bei Google Play.</p>
+          <p class="play-soon">Die Android-Version ist gerade im Test bei Google Play und erscheint in Kürze. Auf iPhone und iPad kannst du schon heute loslegen.</p>
+        </div>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Wie kündige ich mein Abo?</summary>
+        <div class="faq__body"><p>Jederzeit in den Abo-Einstellungen deines Apple- bzw. Google-Kontos. Das Abo verlängert sich nur, wenn du es nicht mindestens 24&nbsp;Stunden vor Ende der laufenden Periode kündigst.</p></div>
+      </details>
+      <details class="faq__item reveal">
+        <summary>In welcher Sprache ist die App?</summary>
+        <div class="faq__body"><p>Oberfläche und alle Lerninhalte sind auf Deutsch – das ist die Prüfungssprache.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── Final CTA ─────────────────────────────── -->
+  <section class="final" id="download" aria-labelledby="final-title">
+    <div class="container final__inner">
+      <img class="final__icon reveal" src="assets/img/app-icon.png" width="112" height="112" alt="StkAufnahme App-Icon" loading="lazy">
+      <h2 class="h2 final__title reveal" id="final-title">Bereit für deinen<br>Aufnahmetest?</h2>
+
+      <div class="cta final__cta reveal">
+        <a class="btn3d only-ios" href="https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884" data-store="ios">
+          <span class="btn3d__face">Im App Store laden</span>
+        </a>
+        <a class="btn3d only-android play-live" href="https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme" data-store="android">
+          <span class="btn3d__face">Bei Google Play laden</span>
+        </a>
+        <div class="soon only-android play-soon" role="status">
+          <span class="soon__dot" aria-hidden="true"></span>
+          <span><strong>Android-Version kommt bald.</strong> Sie ist gerade im Test bei Google Play.</span>
+        </div>
+
+        <div class="download only-desktop">
+          <div class="badges badges--stack">
+            <a class="badge" href="https://apps.apple.com/de/app/stkaufnahme-studienkolleg/id6787462884" data-store="ios" aria-label="Im App Store laden">
+              <img src="assets/badges/app-store.svg" width="150" height="50" alt="Download on the App Store">
+            </a>
+            <a class="badge play-live" href="https://play.google.com/store/apps/details?id=com.bogdanbeast.stkaufnahme" data-store="android" aria-label="Bei Google Play laden">
+              <img src="assets/badges/google-play.png" width="168" height="50" alt="Get it on Google Play">
+            </a>
+            <span class="badge badge--soon play-soon" title="Die Android-Version ist gerade im Test">
+              <img src="assets/badges/google-play.png" width="168" height="50" alt="Google Play – bald verfügbar">
+              <em>bald</em>
+            </span>
+          </div>
+          <div class="qr">
+            <img src="assets/img/qr.svg" width="132" height="132" alt="QR-Code zu dieser Seite" loading="lazy">
+            <p><strong>Mit dem Handy scannen</strong>Die Seite öffnet direkt den passenden Store.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ─────────────────────────────── Footer ─────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/icon-192.png" width="24" height="24" alt="" loading="lazy">
+      <span>© <span data-year>2026</span> Bohdan Pavliuk</span>
+    </div>
+    <nav class="footer__links" aria-label="Rechtliches">
+      <a href="https://piuspavliuk-wq.github.io/stkaufnahme-legal/impressum.html">Impressum</a>
+      <a href="https://piuspavliuk-wq.github.io/stkaufnahme-legal/datenschutz.html">Datenschutz</a>
+      <a href="https://piuspavliuk-wq.github.io/stkaufnahme-legal/nutzungsbedingungen.html">Nutzungsbedingungen</a>
+      <a href="mailto:piuspavliuk@gmail.com">Kontakt</a>
+    </nav>
+  </div>
+  <p class="container footer__legal">
+    Apple und das Apple-Logo sind Marken der Apple Inc., eingetragen in den USA und weiteren Ländern. App Store ist eine Dienstleistungsmarke der Apple Inc.
+    Google Play und das Google Play-Logo sind Marken von Google LLC.
+  </p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
