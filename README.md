@@ -1,7 +1,7 @@
 # StkAufnahme — Landing
 
 Статичний лендинг для застосунку StkAufnahme. Живе на GitHub Pages:
-**https://piuspavliuk-wq.github.io/stkaufnahme/**
+**https://stkaufnahme.de/**
 
 ## Як це працює
 
